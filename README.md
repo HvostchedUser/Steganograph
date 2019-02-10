@@ -1,5 +1,5 @@
 # Steganograph!
-Writes encoded images to h.png
+Hide your text in an image from the web
 # To run the encoder:
 java -jar encoder.jar  
 * internet connection required  
