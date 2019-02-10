@@ -40,7 +40,6 @@ public class decode {
                         } else {
                             bits = "0" + bits;
                         }
-
                     }
                     if (col == 2) {
                         if (Math.abs(x.getBlue() - y.getBlue()) > 0) {

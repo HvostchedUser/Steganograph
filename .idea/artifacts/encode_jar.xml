@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="encode:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/encode_jar</output-path>
+    <root id="archive" name="zadacha.jar">
+      <element id="module-output" name="zadacha" />
+    </root>
+  </artifact>
+</component>
