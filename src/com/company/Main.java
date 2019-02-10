@@ -14,9 +14,15 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
 	// write your code here
-        Random r=new Random(13377331);
-        BufferedImage bi=ImageIO.read(new URL("http://www.chetekwinterfest.org/webcam/b.jpg"));
-        String a="teststring";
+        Random r=new Random(Long.parseLong(args[0]));
+
+        BufferedImage bi;//
+        if(args[1].contains("http://")||args[1].contains("https://")) {//for example http://www.chetekwinterfest.org/webcam/b.jpg
+            bi = ImageIO.read(new URL(args[1]));
+        }else{
+            bi = ImageIO.read(new File(args[1]));
+        }
+        String a=args[2];
         byte[] b=a.getBytes();
         String bits=toBitString(b);
         int loc=bits.length()-1;
@@ -43,7 +49,7 @@ public class Main {
                                 temp = new Color(temp.getRed(), temp.getGreen(), temp.getBlue() - 1);
                             }
                         bi.setRGB(i, j, temp.getRGB());
-                        ImageIO.write(bi, "png", new File("h.png"));
+                        ImageIO.write(bi, "png", new File(args[3]));
                         return;
                     }
                     if (col == 0) {

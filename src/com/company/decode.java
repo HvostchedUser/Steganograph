@@ -11,9 +11,24 @@ import java.util.Random;
 
 public class decode {
     public static void main(String[] args) throws IOException {
-        Random r=new Random(13377331);
-        BufferedImage in=ImageIO.read(new File("h.png"));
-        BufferedImage bi=ImageIO.read(new URL("http://www.chetekwinterfest.org/webcam/b.jpg"));
+        Random r=new Random(Long.parseLong(args[0]));
+
+        BufferedImage bi;
+
+
+        if(args[1].contains("http://")||args[1].contains("https://")) {
+            bi = ImageIO.read(new URL(args[1]));
+        }else{
+            bi = ImageIO.read(new File(args[1]));
+        }
+
+        BufferedImage in;
+
+        if(args[2].contains("http://")||args[2].contains("https://")) {
+            in = ImageIO.read(new URL(args[2]));
+        }else{
+            in = ImageIO.read(new File(args[2]));
+        }
         String bits="";
         int col=0;
         //System.out.println(bi.getWidth()*bi.getHeight());
