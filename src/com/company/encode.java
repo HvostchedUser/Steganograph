@@ -10,7 +10,7 @@ import java.net.URL;
 import java.nio.ByteBuffer;
 import java.util.Random;
 
-public class Main {
+public class encode {
 
     public static void main(String[] args) throws IOException {
 	// write your code here

@@ -13,6 +13,7 @@ public class decode {
     public static void main(String[] args) throws IOException {
         Random r=new Random(Long.parseLong(args[0]));
 
+
         BufferedImage bi;
 
 
